@@ -142,7 +142,7 @@ export default function Projects({ data }: ProjectsProps) {
                         </div>
 
                         {/* Description */}
-                        <p className="text-gray-300 mb-6 leading-relaxed text-base">{project.description}</p>
+                        <p className="text-white mb-6 leading-relaxed text-base">{project.description}</p>
 
                         {/* Key Features - Only show if features exist */}
                         {project.features && project.features.length > 0 && (
@@ -300,7 +300,7 @@ export default function Projects({ data }: ProjectsProps) {
                                     {resumeData.responsibilities?.map((responsibility: string, respIndex: number) => (
                                       <div key={respIndex} className="flex items-start">
                                         <div className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                        <p className="text-gray-300 leading-relaxed text-sm">{responsibility}</p>
+                                        <p className="text-white leading-relaxed text-sm">{responsibility}</p>
                                       </div>
                                     ))}
                                   </div>
@@ -323,7 +323,7 @@ export default function Projects({ data }: ProjectsProps) {
                                             {challengeIndex + 1}
                                           </span>
                                         </div>
-                                        <p className="text-gray-300 leading-relaxed text-sm">{challenge}</p>
+                                        <p className="text-white leading-relaxed text-sm">{challenge}</p>
                                       </div>
                                     ))}
                                   </div>

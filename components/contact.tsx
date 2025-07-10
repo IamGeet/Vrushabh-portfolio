@@ -110,7 +110,7 @@ export default function Contact({ data }: ContactProps) {
 
       {/* Footer */}
       <div className="mt-20 pt-8 border-t border-white/10 text-center">
-        <p className="text-gray-400">© 2025 Vrushabh Vakhare.</p>
+        <p className="text-white">© 2025 Vrushabh Vakhare</p>
       </div>
     </SectionAnimations>
   )

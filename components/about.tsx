@@ -130,7 +130,7 @@ export default function About({ data }: AboutProps) {
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Text Content - Mobile First */}
               <div className="space-y-4 sm:space-y-6 order-2 lg:order-1">
-                <p className="text-base sm:text-lg text-gray-300 leading-relaxed">{data.description}</p>
+                <p className="text-base sm:text-lg text-white leading-relaxed">{data.description}</p>
 
                 <div className="space-y-3 sm:space-y-4">
                   <h3 className="text-xl sm:text-2xl font-semibold text-white">Key Strengths</h3>
@@ -141,7 +141,7 @@ export default function About({ data }: AboutProps) {
                         className="flex items-center space-x-2 p-2 sm:p-3 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10"
                       >
                         <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex-shrink-0"></div>
-                        <span className="text-sm sm:text-base text-gray-300">{highlight}</span>
+                        <span className="text-sm sm:text-base text-white">{highlight}</span>
                       </div>
                     ))}
                   </div>
@@ -195,7 +195,7 @@ export default function About({ data }: AboutProps) {
                 >
                   {/* Profile image */}
                   <motion.div
-                    className={`relative ${getImageSize()} rounded-full overflow-hidden border border-white/20 shadow-lg`}
+                    className={`relative w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden border border-white/20 shadow-lg`}
                     animate={{
                       y: [0, isMobile ? -4 : -8, 0],
                     }}

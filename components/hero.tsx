@@ -69,7 +69,7 @@ export default function Hero({ data }: HeroProps) {
           </motion.h1>
 
           <motion.div
-            className="text-2xl md:text-3xl text-gray-300 mb-8 h-12 font-light tracking-wide"
+            className="text-2xl md:text-3xl text-white mb-8 h-12 font-light tracking-wide"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -85,7 +85,7 @@ export default function Hero({ data }: HeroProps) {
           </motion.div>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light"
+            className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed font-light"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}

@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 
-export default function AsicCircuitBackground() {
+export default function NetBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -15,7 +15,6 @@ export default function AsicCircuitBackground() {
     canvas.width = width;
     canvas.height = height;
 
-    // Handle resize
     const handleResize = () => {
       width = window.innerWidth;
       height = window.innerHeight;
@@ -24,7 +23,6 @@ export default function AsicCircuitBackground() {
     };
     window.addEventListener("resize", handleResize);
 
-    // Network parameters
     const POINTS = 48;
     const DIST = 140;
     const SPEED = 0.4;
@@ -38,7 +36,6 @@ export default function AsicCircuitBackground() {
     function draw() {
       if (!ctx) return;
       ctx.clearRect(0, 0, width, height);
-      // Draw lines
       for (let i = 0; i < POINTS; i++) {
         for (let j = i + 1; j < POINTS; j++) {
           const dx = nodes[i].x - nodes[j].x;
@@ -58,7 +55,6 @@ export default function AsicCircuitBackground() {
           }
         }
       }
-      // Draw points
       for (let i = 0; i < POINTS; i++) {
         ctx.save();
         ctx.beginPath();
@@ -76,7 +72,6 @@ export default function AsicCircuitBackground() {
       for (let i = 0; i < POINTS; i++) {
         nodes[i].x += nodes[i].vx;
         nodes[i].y += nodes[i].vy;
-        // Bounce off edges
         if (nodes[i].x < 0 || nodes[i].x > width) nodes[i].vx *= -1;
         if (nodes[i].y < 0 || nodes[i].y > height) nodes[i].vy *= -1;
       }
@@ -91,42 +86,16 @@ export default function AsicCircuitBackground() {
   }, []);
 
   return (
-    <div
-      className="fixed inset-0 overflow-hidden pointer-events-none"
+    <canvas
+      ref={canvasRef}
       style={{
-        zIndex: 0,
+        position: "absolute",
+        inset: 0,
         width: "100vw",
         height: "100vh",
-        color: "#fff", 
+        zIndex: 1,
+        pointerEvents: "none",
       }}
-    >
-      {/* Background image */}
-      <img
-        src="/images/mind.jpg"
-        alt="circuit"
-        style={{
-          position: "absolute",
-          width: "100vw",
-          height: "100vh",
-          objectFit: "cover",
-          objectPosition: "center", // Ensures image is centered
-          zIndex: 0,
-          opacity: 1,
-        }}
-        draggable={false}
-      />
-      {/* Optional: dark overlay for readability */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          width: "100vw",
-          height: "100vh",
-          background: "radial-gradient(ellipse at 50% 50%, #00000099 60%, #000000cc 100%)",
-          zIndex: 1,
-        }}
-      />
-      {/* Net animation canvas removed. Use NetBackground component instead if needed. */}
-    </div>
+    />
   );
 }
