@@ -164,7 +164,7 @@ export default function WelcomeScreen({ onComplete }: WelcomeScreenProps) {
               className="space-y-8"
             >
               <motion.h1
-                className="text-5xl md:text-6xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-500 to-cyan-400 tracking-normal font-system"
+                className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-white tracking-normal font-system"
                 animate={{
                   backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                 }}

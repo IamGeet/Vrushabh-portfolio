@@ -17,7 +17,7 @@ import { portfolioData } from "@/lib/portfolio-data"
 import dynamic from "next/dynamic"
 
 // Updated to use the new ASIC circuit background
-const AnimatedBackground = dynamic(() => import("@/components/animated-background"), {
+const AsicCircuitBackground = dynamic(() => import("@/components/asic-circuit-background"), {
   ssr: false,
   loading: () => <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-black to-gray-900" />,
 })
@@ -64,7 +64,7 @@ export default function PortfolioClient() {
     <ErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-gray-950 via-black to-gray-900 relative">
         {/* Animated Background - Client Side Only */}
-        {isMounted && <AnimatedBackground />}
+        {isMounted && <AsicCircuitBackground />}
 
         {/* Three.js Scene - Client Side Only */}
         {isMounted && <ThreeScene />}

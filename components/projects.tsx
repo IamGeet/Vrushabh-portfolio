@@ -129,7 +129,7 @@ export default function Projects({ data }: ProjectsProps) {
                               <IconComponent className="text-white" size={28} />
                             </div>
                             <div className="flex-1">
-                              <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300 leading-tight">
+                              <h3 className="text-2xl font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300 leading-tight">
                                 {project.name}
                               </h3>
                             </div>
@@ -224,7 +224,7 @@ export default function Projects({ data }: ProjectsProps) {
                                 hasData(resumeData.maxFreq) ||
                                 hasData(resumeData.tools)) && (
                                 <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                                  <h3 className="text-xl font-bold text-white mb-6 flex items-center">
+                                  <h3 className="text-xl font-semibold text-white mb-6 flex items-center">
                                     <Target className="text-blue-400 mr-3" size={20} />
                                     Project Overview
                                   </h3>
@@ -291,7 +291,7 @@ export default function Projects({ data }: ProjectsProps) {
                               {/* Responsibilities - Only show if we have data */}
                               {hasData(resumeData.responsibilities) && (
                                 <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                                  <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+                                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
                                     <CheckCircle className="text-green-400 mr-3" size={20} />
                                     Key Responsibilities
                                   </h3>
@@ -310,7 +310,7 @@ export default function Projects({ data }: ProjectsProps) {
                               {/* Challenges - Only show if we have data */}
                               {hasData(resumeData.challenges) && (
                                 <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                                  <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+                                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
                                     <Zap className="text-yellow-400 mr-3" size={20} />
                                     Challenges Faced and Resolved
                                   </h3>
@@ -333,7 +333,7 @@ export default function Projects({ data }: ProjectsProps) {
                               {/* Key Achievements - Only show if we have data */}
                               {hasData(resumeData.achievements) && (
                                 <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-400/20 rounded-xl p-6">
-                                  <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+                                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
                                     <AlertTriangle className="text-blue-400 mr-3" size={20} />
                                     Key Achievements
                                   </h3>

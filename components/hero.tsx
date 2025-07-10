@@ -58,12 +58,12 @@ export default function Hero({ data }: HeroProps) {
           className="mb-12"
         >
           <motion.h1
-            className="text-6xl md:text-8xl font-extralight text-white mb-8 tracking-wider"
+            className="text-6xl md:text-8xl font-bold text-white mb-8 tracking-wider"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
           >
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-white bg-clip-text text-transparent">
               {data.name}
             </span>
           </motion.h1>
