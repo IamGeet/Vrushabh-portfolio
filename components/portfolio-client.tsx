@@ -66,8 +66,7 @@ export default function PortfolioClient() {
         {/* Animated Background - Client Side Only */}
         {isMounted && <AsicCircuitBackground />}
 
-        {/* Three.js Scene - Client Side Only */}
-        {isMounted && <ThreeScene />}
+       
 
         <div className={`relative z-10 transition-opacity duration-1000 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
           <Navigation />
