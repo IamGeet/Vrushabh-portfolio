@@ -82,7 +82,8 @@ export default function SectionAnimations({ children, sectionId }: SectionAnimat
       },
       contact: {
         ...baseStyle,
-        boxShadow: isVisible ? `0 0 ${20 + scrollProgress * 30}px rgba(139, 92, 246, 0.3)` : "none",
+        // Remove dynamic box shadow for stability
+        boxShadow: isVisible ? "0 0 20px rgba(139, 92, 246, 0.2)" : "none",
       },
     }
 
@@ -112,19 +113,8 @@ export default function SectionAnimations({ children, sectionId }: SectionAnimat
           )}
 
           {sectionId === "contact" && (
-            <div className="absolute top-5 left-1/2 transform -translate-x-1/2">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="absolute w-2 h-2 bg-pink-400/60 rounded-full animate-bounce"
-                  style={{
-                    left: `${i * 10}px`,
-                    animationDelay: `${i * 0.2}s`,
-                    animationDuration: "2s",
-                  }}
-                />
-              ))}
-            </div>
+            // Removed floating elements for stability
+            null
           )}
         </div>
       )}

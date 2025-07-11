@@ -44,10 +44,19 @@ export default function Contact({ data }: ContactProps) {
     <SectionAnimations sectionId="contact">
       <section
         id="contact"
-        className="min-h-screen flex items-center justify-center bg-black/20"
+        className="min-h-screen flex items-center justify-center bg-black/20 relative"
+        style={{ position: 'relative', zIndex: 1 }}
       >
         <div className="w-full flex justify-center">
-          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl p-10 max-w-xl w-full flex flex-col items-center">
+          <div 
+            className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl p-10 max-w-xl w-full flex flex-col items-center"
+            style={{ 
+              position: 'relative',
+              zIndex: 2,
+              transform: 'translateZ(0)', // Force hardware acceleration
+              willChange: 'auto' // Disable will-change for stability
+            }}
+          >
             <div className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg text-center">
               Let's Connect
             </div>
